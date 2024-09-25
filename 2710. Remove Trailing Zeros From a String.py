@@ -1,9 +1,5 @@
 class Solution(object):
     def removeTrailingZeros(self, num):
-        """
-        :type num: str
-        :rtype: str
-        """
         l = 0
         r = len(num) - 1
 
@@ -16,6 +12,6 @@ class Solution(object):
                 return num[l:r+1]
         return num[l:r+1]
 
-        # return num.rstrip('0')
+        return num.rstrip('0')
         
         

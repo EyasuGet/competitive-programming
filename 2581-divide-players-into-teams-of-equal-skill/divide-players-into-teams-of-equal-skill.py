@@ -7,9 +7,9 @@ class Solution(object):
         le = len(skill)
         skill.sort()
 
-        summ = sum(skill)
-        teams_sum = summ / (le / 2)
-
+        # summ = sum(skill)
+        # teams_sum = summ / (le / 2) # it can also be the skill[0] + skil[-1]
+        teams_sum  = skill[0] + skill[-1]
         l = 0
         r = le - 1
         chem = 0
@@ -19,8 +19,6 @@ class Solution(object):
                 chem +=(skill[l] * skill[r])
                 l += 1
                 r -= 1
-            elif s > teams_sum:
-                return -1
             else:
-                l += 1
+                return -1
         return chem

@@ -21,5 +21,6 @@ class Solution(object):
             while st and nums[st[-1]] <= nums[j]:
                 i = st.pop()
                 ramp = max(ramp, j - i)
-
+            if not st:
+                break
         return ramp

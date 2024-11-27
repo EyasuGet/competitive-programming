@@ -8,10 +8,13 @@ class Solution(object):
         
         nums.sort()
         n = len(nums)
-        
+
         closest = float("inf")
         right = len(nums)-1
         for i in range(n):
+            if i > 0 and nums[i] == nums[i-1]:
+                continue
+
             left = i + 1
             right = n - 1
             while left < right:

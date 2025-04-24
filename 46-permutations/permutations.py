@@ -4,8 +4,7 @@ class Solution(object):
         n = len(nums)
         def backtrack():
             if len(sol) == n:
-                ans.append(sol[:])
-            
+                ans.append(sol[:])  
             for i in nums:
                 if i not in sol:
                     sol.append(i)
@@ -13,5 +12,3 @@ class Solution(object):
                     sol.pop()
         backtrack()
         return ans
-        #tc = o(n!) 
-        #sc = o(n)

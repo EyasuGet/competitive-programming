@@ -15,7 +15,6 @@ class Solution:
                     rad = next_rad
                 else:
                     break
-            
             max_rad = max(max_rad, rad)
 
         return max_rad

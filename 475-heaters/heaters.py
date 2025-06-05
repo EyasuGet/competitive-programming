@@ -2,7 +2,6 @@ class Solution:
     def findRadius(self, houses: List[int], heaters: List[int]) -> int:
         houses.sort()
         heaters.sort()
-
         j = 0
         max_rad = 0
         for i in range(len(houses)):
